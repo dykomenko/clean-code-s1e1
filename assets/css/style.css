@@ -17,7 +17,7 @@ body {
 }
 
 .startscreen__link {
-    font-family: fantasy, cursive;
+    font-family: fantasy, cursive, sans-serif;
 }
 
 @media (max-width:768px) {
