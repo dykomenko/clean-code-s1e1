@@ -26,7 +26,7 @@ body {
     }
 }
 
-.centered-main-page-element {
+.application__add_item {
     display: block;
     width: 500px;
     margin: 0 auto 0;
