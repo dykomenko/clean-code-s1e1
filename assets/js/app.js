@@ -1,13 +1,3 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
-
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
-
-
-// Event handling, user interaction is what starts the code execution.
-
 var taskInput = document.getElementById('new-task');//Add a new task.
 var addButton = document.querySelector('.addButton');//first button
 var incompleteTaskHolder = document.getElementById('incompleteTasks');//ul of #incompleteTasks
@@ -16,15 +6,16 @@ var completedTasksHolder = document.getElementById('completed-tasks');//complete
 
 //New task list item
 var createNewTaskElement = function (taskString) {
-
     var listItem = document.createElement('li');
-
     //input (checkbox)
     var checkBox = document.createElement('input');//checkbx
+    
     //label
     var label = document.createElement('label');//label
+
     //input (text)
     var editInput = document.createElement('input');//text
+
     //button.edit
     var editButton = document.createElement('button');//edit button
 
@@ -58,7 +49,6 @@ var createNewTaskElement = function (taskString) {
 }
 
 
-
 var addTask = function () {
     console.log('Add Task...');
     //Create a new list item with the text from the #new-task:
@@ -73,7 +63,6 @@ var addTask = function () {
 
 }
 
-//Edit an existing task.
 
 var editTask = function () {
     console.log('Edit Task...');
@@ -103,7 +92,6 @@ var editTask = function () {
 };
 
 
-//Delete task.
 var deleteTask = function () {
     console.log('Delete Task...');
 
@@ -115,7 +103,6 @@ var deleteTask = function () {
 }
 
 
-//Mark task completed
 var taskCompleted = function () {
     console.log('Complete Task...');
 
@@ -138,9 +125,6 @@ var taskIncomplete = function () {
 }
 
 
-
-//Set the click handler to the addTask function.
-addButton.onclick = addTask;
 addButton.addEventListener('click', addTask);
 
 
@@ -169,19 +153,8 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
 }
 
 
-
-
 //cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
-
-
-
-
-// Issues with usability don't get seen until they are in front of a human tester.
-
-//prevent creation of empty tasks.
-
-//Change edit to save when you are in edit mode.
