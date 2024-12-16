@@ -26,10 +26,14 @@ body {
     }
 }
 
-.application__add_item {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
+.application {
+    & .application__add_item,
+    .application__todo,
+    .application__completed {
+        display: block;
+        width: 500px;
+        margin: 0 auto 0;
+    }
 }
 
 .task {
